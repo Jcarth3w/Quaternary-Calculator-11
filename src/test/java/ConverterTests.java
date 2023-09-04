@@ -6,6 +6,15 @@ public class ConverterTests
 {
     Converter converter = new Converter();
 
+
+    @Test
+    public void zeroTest()
+    {
+        int zero = 0;
+        Assertions.assertEquals(0, converter.toQuaternary(zero));
+        Assertions.assertEquals(0, converter.toDecimal(zero));
+    }
+
     @Test
     public void easyToDecimalTest()
     {
@@ -28,6 +37,29 @@ public class ConverterTests
         Assertions.assertEquals(322516, converter.toDecimal(quaternaryNum));
 
     }
+
+
+    @Test
+    public void easyToQuaternaryTest()
+    {
+        int decimalNum = 5;
+        Assertions.assertEquals(11, converter.toQuaternary(decimalNum));
+    }
+
+    @Test
+    public void difficultToQuaternaryTest()
+    {
+        int decimalNum = 63;
+        Assertions.assertEquals(333, converter.toQuaternary(decimalNum));
+    }
+
+    @Test
+    public void obscenelyDifficultToQuaternaryTest()
+    {
+        int decimalNum = 322516;
+        Assertions.assertEquals(1032233110, converter.toQuaternary(decimalNum));
+    }
+
 
 
 

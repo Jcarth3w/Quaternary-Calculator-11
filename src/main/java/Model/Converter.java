@@ -17,4 +17,23 @@ public class Converter
     }
 
 
+    public int toQuaternary(int decimalNum)
+    {
+        if (decimalNum == 0)
+        {
+            return 0;
+        }
+        StringBuilder quaternaryNum = new StringBuilder();
+
+        while (decimalNum != 0) {
+            int remainder = decimalNum % 4;
+            quaternaryNum.insert(0, remainder);
+            decimalNum /= 4;
+        }
+
+        return Integer.parseInt(quaternaryNum.toString());
+    }
+
+
+
 }
