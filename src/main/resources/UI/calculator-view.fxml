@@ -11,25 +11,28 @@
     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
   </padding>
    <TextField fx:id="calculationTextField" alignment="CENTER" editable="false" />
-   <HBox alignment="CENTER">
-      <children>
-         <VBox alignment="CENTER" prefHeight="100.0" prefWidth="50.0">
-            <children>
-              <Button fx:id="zeroButton" onAction="#onZeroButtonPress" prefHeight="25.0" prefWidth="25.0" text="0" textAlignment="CENTER" />
-               <Button fx:id="oneButton" onAction="#onOneButtonPress" prefHeight="25.0" prefWidth="25.0" text="1" textAlignment="CENTER" />
-               <Button fx:id="twoButton" onAction="#onTwoButtonPress" prefHeight="25.0" prefWidth="25.0" text="2" textAlignment="CENTER" />
-               <Button fx:id="threeButton" onAction="#onThreeButtonPress" prefHeight="25.0" prefWidth="25.0" text="3" textAlignment="CENTER" />
-            </children>
-         </VBox>
-         <VBox alignment="CENTER" layoutX="60.0" layoutY="10.0" prefHeight="100.0" prefWidth="50.0">
-            <children>
-               <Button fx:id="divideButton" onAction="#onDivideButtonPress" prefHeight="25.0" prefWidth="25.0" text="/" textAlignment="CENTER" />
-               <Button fx:id="multiplyButton" onAction="#onMultiplyButtonPress" prefHeight="25.0" prefWidth="25.0" text="x" textAlignment="CENTER" />
-               <Button fx:id="subtractButton" onAction="#onSubtractButtonPress" prefHeight="25.0" prefWidth="25.0" text="-" textAlignment="CENTER" />
-               <Button fx:id="addButton" onAction="#onAddButtonPress" prefHeight="25.0" prefWidth="25.0" text="+" textAlignment="CENTER" />
-               <Button fx:id="equalButton" layoutX="23.0" layoutY="85.0" onAction="#onEqualButtonPress" prefHeight="25.0" prefWidth="25.0" text="=" textAlignment="CENTER" />
-            </children>
-         </VBox>
-      </children>
-   </HBox>
+    <HBox alignment="CENTER">
+        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="50.0">
+            <Button onAction="#onZeroButtonPress" prefHeight="25.0" prefWidth="25.0" text="0"
+                    textAlignment="CENTER"/>
+            <Button onAction="#onOneButtonPress" prefHeight="25.0" prefWidth="25.0" text="1"
+                    textAlignment="CENTER"/>
+            <Button onAction="#onTwoButtonPress" prefHeight="25.0" prefWidth="25.0" text="2"
+                    textAlignment="CENTER"/>
+            <Button onAction="#onThreeButtonPress" prefHeight="25.0" prefWidth="25.0" text="3"
+                    textAlignment="CENTER"/>
+        </VBox>
+        <VBox alignment="CENTER" layoutX="60.0" layoutY="10.0" prefHeight="100.0" prefWidth="50.0">
+            <Button onAction="#onDivideButtonPress" prefHeight="25.0" prefWidth="25.0" text="/"
+                    textAlignment="CENTER"/>
+            <Button onAction="#onMultiplyButtonPress" prefHeight="25.0" prefWidth="25.0"
+                    text="x" textAlignment="CENTER"/>
+            <Button onAction="#onSubtractButtonPress" prefHeight="25.0" prefWidth="25.0"
+                    text="-" textAlignment="CENTER"/>
+            <Button onAction="#onAddButtonPress" prefHeight="25.0" prefWidth="25.0" text="+"
+                    textAlignment="CENTER"/>
+            <Button onAction="#onEqualButtonPress" prefHeight="25.0"
+                    prefWidth="25.0" text="=" textAlignment="CENTER"/>
+        </VBox>
+    </HBox>
 </VBox>
