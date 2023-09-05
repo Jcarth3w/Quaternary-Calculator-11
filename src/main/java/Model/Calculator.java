@@ -33,7 +33,7 @@ public class Calculator
         return storedNumber.getAsInt();
     }
 
-    public int equals(int input) {
+    public int equalBtn(int input) {
         if (pendingOperation == null || storedNumber.isEmpty()) {
             return input;
         } else {
