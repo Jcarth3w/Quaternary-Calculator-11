@@ -2,7 +2,6 @@ package UI;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 public class Controller {
@@ -45,5 +44,21 @@ public class Controller {
 
     public void onEqualButtonPress(ActionEvent actionEvent) {
         calculationTextField.setText("=");
+    }
+
+    public void onSquareButtonPress(ActionEvent actionEvent) {
+        calculationTextField.setText("sq");
+    }
+
+    public void onSqrtButtonPress(ActionEvent actionEvent) {
+        calculationTextField.setText("sqrt");
+    }
+
+    public void onClearButtonPress(ActionEvent actionEvent) {
+        calculationTextField.setText("clear");
+    }
+
+    public void onToggleButtonPress(ActionEvent actionEvent) {
+        calculationTextField.setText("toggle");
     }
 }
