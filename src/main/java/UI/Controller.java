@@ -12,38 +12,38 @@ public class Controller {
 
     @FXML
     public void onZeroButtonPress(ActionEvent actionEvent) {
-        System.out.println("0");
+        calculationTextField.setText("0");
     }
 
     public void onOneButtonPress(ActionEvent actionEvent) {
-        System.out.println("1");
+        calculationTextField.setText("1");
     }
 
     public void onTwoButtonPress(ActionEvent actionEvent) {
-        System.out.println("2");
+        calculationTextField.setText("2");
     }
 
     public void onThreeButtonPress(ActionEvent actionEvent) {
-        System.out.println("3");
+        calculationTextField.setText("3");
     }
 
     public void onDivideButtonPress(ActionEvent actionEvent) {
-        System.out.println("/");
+        calculationTextField.setText("/");
     }
 
     public void onMultiplyButtonPress(ActionEvent actionEvent) {
-        System.out.println("*");
+        calculationTextField.setText("*");
     }
 
     public void onSubtractButtonPress(ActionEvent actionEvent) {
-        System.out.println("-");
+        calculationTextField.setText("-");
     }
 
     public void onAddButtonPress(ActionEvent actionEvent) {
-        System.out.println("+");
+        calculationTextField.setText("+");
     }
 
     public void onEqualButtonPress(ActionEvent actionEvent) {
-        System.out.println("=");
+        calculationTextField.setText("=");
     }
 }
