@@ -1,11 +1,17 @@
 package Model;
 
+import java.util.OptionalInt;
+
 public class Calculator
 {
     Converter converter = new Converter();
 
+    private OptionalInt storedNumber = OptionalInt.empty();
+    private Operation pendingOperation = null;
+
     public int add(int num1, int num2)
     {
+        if (storedNumber.isEmpty()) {}
         return num1 + num2;
     }
 
