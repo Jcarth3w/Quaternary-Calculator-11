@@ -1,4 +1,4 @@
-module java.demo {
+module quaternaryCalculator {
     requires javafx.controls;
     requires javafx.fxml;
 
