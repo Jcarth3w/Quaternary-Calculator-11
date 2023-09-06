@@ -23,7 +23,7 @@ public class CalculatorTests
         int num1 = 80;
         int num2 = 35;
         Assertions.assertEquals(80, calculator.subtract(num1));
-        Assertions.assertEquals(45, calculator.equalBtn(num2));
+        Assertions.assertEquals(45, calculator.equalBtn(num2));\
     }
 
     @Test
@@ -33,15 +33,17 @@ public class CalculatorTests
         int num2 = 80;
         Assertions.assertEquals(35, calculator.subtract(num1));
         Assertions.assertEquals(0, calculator.equalBtn(num2));
-    }
+
 
     @Test
     public void multiplicationTest()
     {
         int num1 = 27;
         int num2 = 8;
+
         Assertions.assertEquals(27, calculator.multiply(num1));
         Assertions.assertEquals(216, calculator.equalBtn(num2));
+
     }
 
     @Test
@@ -49,8 +51,10 @@ public class CalculatorTests
     {
         int num1 = 50;
         int num2 = 10;
+
         Assertions.assertEquals(50, calculator.divide(num1));
         Assertions.assertEquals(5, calculator.equalBtn(num2));
+
     }
 
 
