@@ -31,7 +31,8 @@ public class Controller
     }
 
     public void onDivideButtonPress() {
-        calculationTextField.setText("/");
+        calculator.divide(converter.toDecimal(Integer.parseInt(calculationTextField.getText())));
+        calculationTextField.clear();
     }
 
     public void onMultiplyButtonPress()
@@ -46,7 +47,8 @@ public class Controller
     }
 
     public void onAddButtonPress() {
-        calculationTextField.setText("+");
+        calculator.add(converter.toDecimal(Integer.parseInt(calculationTextField.getText())));
+        calculationTextField.clear();
     }
 
     public void onEqualButtonPress() {
@@ -68,7 +70,7 @@ public class Controller
     }
 
     public void onToggleButtonPress() {
-        calculationTextField.setText("toggle");
+        calculationTextField.setText("toggle non-functional");
     }
 
 
