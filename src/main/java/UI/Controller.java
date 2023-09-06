@@ -57,11 +57,19 @@ public class Controller
     }
 
     public void onSquareButtonPress() {
-        calculationTextField.setText("sq");
+        int userInput = Integer.parseInt(calculationTextField.getText());
+        userInput = converter.toDecimal(userInput);
+        userInput = calculator.square(userInput);
+        userInput = converter.toQuaternary(userInput);
+        calculationTextField.setText(String.valueOf(userInput));
     }
 
     public void onSqrtButtonPress() {
-        calculationTextField.setText("sqrt");
+        int userInput = Integer.parseInt(calculationTextField.getText());
+        userInput = converter.toDecimal(userInput);
+        userInput = calculator.sqrt(userInput);
+        userInput = converter.toQuaternary(userInput);
+        calculationTextField.setText(String.valueOf(userInput));
     }
 
     public void onClearButtonPress() {
