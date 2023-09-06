@@ -31,29 +31,39 @@ public class Controller
     }
 
     public void onDivideButtonPress() {
-        calculator.divide(converter.toDecimal(Integer.parseInt(calculationTextField.getText())));
+        int userInput = Integer.parseInt(calculationTextField.getText());
+        converter.toDecimal(userInput);
+        calculator.divide(userInput);
         calculationTextField.clear();
     }
 
-    public void onMultiplyButtonPress()
-    {
-        calculator.multiply(converter.toDecimal(Integer.parseInt(calculationTextField.getText())));
+    public void onMultiplyButtonPress() {
+        int userInput = Integer.parseInt(calculationTextField.getText());
+        converter.toDecimal(userInput);
+        calculator.multiply(userInput);
         calculationTextField.clear();
     }
 
     public void onSubtractButtonPress() {
-        calculator.subtract(converter.toDecimal(Integer.parseInt(calculationTextField.getText())));
+        int userInput = Integer.parseInt(calculationTextField.getText());
+        converter.toDecimal(userInput);
+        calculator.subtract(userInput);
         calculationTextField.clear();
     }
 
     public void onAddButtonPress() {
-        calculator.add(converter.toDecimal(Integer.parseInt(calculationTextField.getText())));
+        int userInput = Integer.parseInt(calculationTextField.getText());
+        converter.toDecimal(userInput);
+        calculator.add(userInput);
         calculationTextField.clear();
     }
 
     public void onEqualButtonPress() {
-        calculationTextField.setText(String.valueOf(converter.toQuaternary(calculator.equalBtn(converter.toDecimal
-                (Integer.parseInt(calculationTextField.getText()))))));
+        int userNum2 = Integer.parseInt(calculationTextField.getText());
+        userNum2 = converter.toDecimal(userNum2);
+        userNum2 = calculator.equalBtn(userNum2);
+        userNum2 = converter.toQuaternary(userNum2);
+        calculationTextField.setText(String.valueOf(userNum2));
     }
 
     public void onSquareButtonPress() {
