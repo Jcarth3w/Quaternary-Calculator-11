@@ -1,3 +1,5 @@
+package Tests;
+
 import Model.Calculator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
