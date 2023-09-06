@@ -23,16 +23,16 @@ public class CalculatorTests
         int num1 = 80;
         int num2 = 35;
         Assertions.assertEquals(80, calculator.subtract(num1));
-        Assertions.assertEquals(45, calculator.equalBtn(num2));\
+        Assertions.assertEquals(45, calculator.equalBtn(num2));
     }
 
     @Test
-    public void nonNegativeSubtractTest()
-    {
+    public void nonNegativeSubtractTest() {
         int num1 = 35;
         int num2 = 80;
         Assertions.assertEquals(35, calculator.subtract(num1));
         Assertions.assertEquals(0, calculator.equalBtn(num2));
+    }
 
 
     @Test
