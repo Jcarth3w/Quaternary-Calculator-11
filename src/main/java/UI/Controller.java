@@ -31,7 +31,7 @@ public class Controller
     }
 
     public void onDivideButtonPress() {
-        int userInput = Integer.parseInt(calculationTextField.getText());
+        int userInput = displayStringToInt();
         userInput = converter.toDecimal(userInput);
         System.out.println(userInput);
         calculator.divide(userInput);
@@ -39,7 +39,7 @@ public class Controller
     }
 
     public void onMultiplyButtonPress() {
-        int userInput = Integer.parseInt(calculationTextField.getText());
+        int userInput = displayStringToInt();
         userInput = converter.toDecimal(userInput);
         System.out.println(userInput);
         calculator.multiply(userInput);
@@ -47,7 +47,7 @@ public class Controller
     }
 
     public void onSubtractButtonPress() {
-        int userInput = Integer.parseInt(calculationTextField.getText());
+        int userInput = displayStringToInt();
         userInput = converter.toDecimal(userInput);
         System.out.println(userInput);
         calculator.subtract(userInput);
@@ -55,7 +55,7 @@ public class Controller
     }
 
     public void onAddButtonPress() {
-        int userInput = Integer.parseInt(calculationTextField.getText());
+        int userInput = displayStringToInt();
         userInput = converter.toDecimal(userInput);
         System.out.println(userInput);
         calculator.add(userInput);
@@ -63,7 +63,7 @@ public class Controller
     }
 
     public void onEqualButtonPress() {
-        int userNum2 = Integer.parseInt(calculationTextField.getText());
+        int userNum2 = displayStringToInt();
         userNum2 = converter.toDecimal(userNum2);
         userNum2 = calculator.equalBtn(userNum2);
         userNum2 = converter.toQuaternary(userNum2);
@@ -71,7 +71,7 @@ public class Controller
     }
 
     public void onSquareButtonPress() {
-        int userInput = Integer.parseInt(calculationTextField.getText());
+        int userInput = displayStringToInt();
         userInput = converter.toDecimal(userInput);
         System.out.println(userInput);
         userInput = calculator.square(userInput);
@@ -80,7 +80,7 @@ public class Controller
     }
 
     public void onSqrtButtonPress() {
-        int userInput = Integer.parseInt(calculationTextField.getText());
+        int userInput = displayStringToInt();
         userInput = converter.toDecimal(userInput);
         System.out.println(userInput);
         userInput = calculator.sqrt(userInput);
@@ -96,7 +96,7 @@ public class Controller
 
     public void onToggleButtonPress()
     {
-        int numInDisplay = Integer.parseInt(calculationTextField.getText());
+        int numInDisplay = displayStringToInt();
         if(converter.isQuaternary(numInDisplay))
         {
             calculationTextField.setText(String.valueOf(converter.toDecimal(numInDisplay)));
@@ -107,5 +107,14 @@ public class Controller
         }
     }
 
+    private int displayStringToInt() {
+        int numInDisplay;
+        try {
+            numInDisplay = Integer.parseInt(calculationTextField.getText());
+        } catch(NumberFormatException e) {
+            return 0;
+        }
+        return numInDisplay;
+    }
 
 }
