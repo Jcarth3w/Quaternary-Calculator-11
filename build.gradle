@@ -13,7 +13,7 @@ repositories {
 
 application {
     mainModule = 'UI'
-    mainClass = 'UI.GUI'
+    mainClass = 'UI.Application'
 }
 
 javafx {
