@@ -32,28 +32,32 @@ public class Controller
 
     public void onDivideButtonPress() {
         int userInput = Integer.parseInt(calculationTextField.getText());
-        converter.toDecimal(userInput);
+        userInput = converter.toDecimal(userInput);
+        System.out.println(userInput);
         calculator.divide(userInput);
         calculationTextField.clear();
     }
 
     public void onMultiplyButtonPress() {
         int userInput = Integer.parseInt(calculationTextField.getText());
-        converter.toDecimal(userInput);
+        userInput = converter.toDecimal(userInput);
+        System.out.println(userInput);
         calculator.multiply(userInput);
         calculationTextField.clear();
     }
 
     public void onSubtractButtonPress() {
         int userInput = Integer.parseInt(calculationTextField.getText());
-        converter.toDecimal(userInput);
+        userInput = converter.toDecimal(userInput);
+        System.out.println(userInput);
         calculator.subtract(userInput);
         calculationTextField.clear();
     }
 
     public void onAddButtonPress() {
         int userInput = Integer.parseInt(calculationTextField.getText());
-        converter.toDecimal(userInput);
+        userInput = converter.toDecimal(userInput);
+        System.out.println(userInput);
         calculator.add(userInput);
         calculationTextField.clear();
     }
@@ -69,6 +73,7 @@ public class Controller
     public void onSquareButtonPress() {
         int userInput = Integer.parseInt(calculationTextField.getText());
         userInput = converter.toDecimal(userInput);
+        System.out.println(userInput);
         userInput = calculator.square(userInput);
         userInput = converter.toQuaternary(userInput);
         calculationTextField.setText(String.valueOf(userInput));
@@ -77,6 +82,7 @@ public class Controller
     public void onSqrtButtonPress() {
         int userInput = Integer.parseInt(calculationTextField.getText());
         userInput = converter.toDecimal(userInput);
+        System.out.println(userInput);
         userInput = calculator.sqrt(userInput);
         userInput = converter.toQuaternary(userInput);
         calculationTextField.setText(String.valueOf(userInput));
