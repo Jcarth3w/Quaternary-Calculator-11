@@ -88,13 +88,23 @@ public class Controller
         calculationTextField.setText(String.valueOf(userInput));
     }
 
-    public void onClearButtonPress() {
+    public void onClearButtonPress()
+    {
         calculationTextField.clear();
         calculator.clear();
     }
 
-    public void onToggleButtonPress() {
-        calculationTextField.setText("toggle non-functional");
+    public void onToggleButtonPress()
+    {
+        int numInDisplay = Integer.parseInt(calculationTextField.getText());
+        if(converter.isQuaternary(numInDisplay))
+        {
+            calculationTextField.setText(String.valueOf(converter.toDecimal(numInDisplay)));
+        }
+        else
+        {
+            calculationTextField.setText(String.valueOf(converter.toQuaternary(numInDisplay)));
+        }
     }
 
 

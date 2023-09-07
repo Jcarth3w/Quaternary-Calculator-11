@@ -6,7 +6,6 @@ public class Converter
     {
         String temp = Integer.toString(quaternaryNum);
         int decimalNum = 0;
-        int check = temp.length();
 
         for(int i = 0; i <  temp.length(); i++)
         {
@@ -32,6 +31,19 @@ public class Converter
         }
 
         return Integer.parseInt(quaternaryNum.toString());
+    }
+
+    public boolean isQuaternary(int num)
+    {
+        while (num > 0) {
+            int digit = num % 10;
+            if (digit >= 4) {
+                return false;
+            }
+            num /= 10;
+        }
+
+        return true;
     }
 
 
