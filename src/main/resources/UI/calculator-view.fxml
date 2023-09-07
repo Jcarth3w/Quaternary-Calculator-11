@@ -5,31 +5,96 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Controller">
+<VBox alignment="CENTER" prefWidth="200.0" spacing="20.0" style="-fx-background-color: black; -fx-border-color: gray; -fx-border-width: 2;" xmlns="http://javafx.com/javafx/17.0.8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Controller">
   <padding>
     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
   </padding>
-   <TextField fx:id="calculationTextField" alignment="CENTER" editable="false" />
-    <HBox alignment="CENTER">
-        <VBox alignment="CENTER">
-            <Button onAction="#onClearButtonPress" text="c" textAlignment="CENTER"/>
-            <Button onAction="#onSquareButtonPress" text="sq" textAlignment="CENTER"/>
-            <Button onAction="#onSqrtButtonPress" text="sqrt" textAlignment="CENTER"/>
-            <Button onAction="#onToggleButtonPress" text="toggle" textAlignment="CENTER"/>
-        </VBox>
-        <VBox alignment="CENTER" prefHeight="125.0" prefWidth="40.0">
-            <Button onAction="#onZeroButtonPress" prefHeight="25.0" prefWidth="25.0" text="0" textAlignment="CENTER" />
-            <Button onAction="#onOneButtonPress" prefHeight="25.0" prefWidth="25.0" text="1" textAlignment="CENTER" />
-            <Button onAction="#onTwoButtonPress" prefHeight="25.0" prefWidth="25.0" text="2" textAlignment="CENTER" />
-            <Button onAction="#onThreeButtonPress" prefHeight="25.0" prefWidth="25.0" text="3" textAlignment="CENTER" />
-        </VBox>
-        <VBox alignment="CENTER" layoutX="60.0" layoutY="10.0" prefHeight="125.0" prefWidth="40.0">
-            <Button onAction="#onDivideButtonPress" prefHeight="25.0" prefWidth="25.0" text="/" textAlignment="CENTER" />
-            <Button onAction="#onMultiplyButtonPress" prefHeight="25.0" prefWidth="25.0" text="x" textAlignment="CENTER" />
-            <Button onAction="#onSubtractButtonPress" prefHeight="25.0" prefWidth="25.0" text="-" textAlignment="CENTER" />
-            <Button onAction="#onAddButtonPress" prefHeight="25.0" prefWidth="25.0" text="+" textAlignment="CENTER" />
-            <Button onAction="#onEqualButtonPress" prefHeight="25.0" prefWidth="25.0" text="=" textAlignment="CENTER" />
-        </VBox>
+   <TextField fx:id="calculationTextField" alignment="CENTER" editable="false" style="-fx-border-color: gray; -fx-border-width: 3;" />
+    <HBox alignment="CENTER" prefHeight="27.0" prefWidth="140.0" spacing="25.0">
+        <Button onAction="#onSquareButtonPress" prefHeight="25.0" style="-fx-background-color: dimgray;" text="sq"
+                textAlignment="CENTER" textFill="WHITE">
+        <font>
+            <Font name="System Bold" size="13.0"/>
+        </font>
+        </Button>
+        <Button onAction="#onSqrtButtonPress" prefHeight="27.0" prefWidth="43.0" style="-fx-background-color: dimgray;"
+                text="sqrt" textAlignment="CENTER" textFill="WHITE">
+        <font>
+            <Font name="System Bold" size="13.0"/>
+        </font>
+        </Button>
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="18.0" prefWidth="200.0" spacing="26.0">
+         <Button onAction="#onClearButtonPress" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: dimgray;" text="c" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+         <Button onAction="#onMultiplyButtonPress" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: dimgray;" text="x" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+         <Button onAction="#onDivideButtonPress" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: dimgray;" text="/" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="18.0" prefWidth="200.0" spacing="25.0">
+        <Button onAction="#onZeroButtonPress" prefHeight="25.0" prefWidth="25.0"
+                style="-fx-background-color: lightgray;" text="0" textAlignment="CENTER">
+        <font>
+            <Font name="System Bold" size="13.0"/>
+        </font>
+        </Button>
+        <Button onAction="#onOneButtonPress" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: lightgray;"
+                text="1" textAlignment="CENTER">
+        <font>
+            <Font name="System Bold" size="13.0"/>
+        </font>
+        </Button>
+        <Button alignment="CENTER" onAction="#onSubtractButtonPress" prefHeight="30.0" prefWidth="17.0"
+                style="-fx-background-color: dimgray;" text="-" textAlignment="CENTER" textFill="WHITE">
+        <font>
+            <Font name="System Bold" size="14.0"/>
+        </font>
+        </Button>
+    </HBox>
+    <HBox alignment="CENTER" prefHeight="18.0" prefWidth="180.0" spacing="25.0">
+        <Button onAction="#onTwoButtonPress" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: lightgray;"
+                text="2" textAlignment="CENTER">
+        <font>
+            <Font name="System Bold" size="13.0"/>
+        </font>
+        </Button>
+        <Button onAction="#onThreeButtonPress" prefHeight="25.0" prefWidth="25.0"
+                style="-fx-background-color: lightgray;" text="3" textAlignment="CENTER">
+        <font>
+            <Font name="System Bold" size="13.0"/>
+        </font>
+        </Button>
+        <Button onAction="#onAddButtonPress" prefHeight="27.0" prefWidth="19.0" style="-fx-background-color: dimgray;"
+                text="+" textAlignment="CENTER" textFill="WHITE">
+        <font>
+            <Font name="Times New Roman Bold" size="14.0"/>
+        </font>
+        </Button>
+    </HBox>
+    <HBox alignment="CENTER" maxWidth="154.0" prefHeight="25.0" prefWidth="145.0" spacing="48.0">
+        <Button onAction="#onToggleButtonPress" prefHeight="25.0" style="-fx-background-color: dimgray;" text="toggle"
+                textAlignment="CENTER" textFill="WHITE">
+        <font>
+            <Font name="System Bold" size="12.0"/>
+        </font>
+        </Button>
+        <Button onAction="#onEqualButtonPress" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: dimgray;"
+                text="=" textAlignment="CENTER" textFill="WHITE">
+        <font>
+            <Font name="System Bold" size="13.0"/>
+        </font>
+        </Button>
     </HBox>
 </VBox>
