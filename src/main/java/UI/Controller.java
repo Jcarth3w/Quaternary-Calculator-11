@@ -34,7 +34,15 @@ public class Controller
         int userInput = displayStringToInt();
         userInput = converter.toDecimal(userInput);
         System.out.println(userInput);
-        calculator.divide(userInput);
+        try
+        {
+            calculator.divide(userInput);
+        }
+        catch (ArithmeticException e)
+        {
+            System.out.println("Can't divide by 0");
+        }
+
         calculationTextField.clear();
     }
 
@@ -96,14 +104,14 @@ public class Controller
 
     public void onToggleButtonPress()
     {
-        int numInDisplay = displayStringToInt();
+        String numInDisplay = calculationTextField.getText();
         if(converter.isQuaternary(numInDisplay))
         {
-            calculationTextField.setText(String.valueOf(converter.toDecimal(numInDisplay)));
+            calculationTextField.setText(String.valueOf(converter.toDecimal(Integer.parseInt(numInDisplay))));
         }
         else
         {
-            calculationTextField.setText(String.valueOf(converter.toQuaternary(numInDisplay)));
+            calculationTextField.setText(String.valueOf(converter.toQuaternary(Integer.parseInt(numInDisplay))));
         }
     }
 
