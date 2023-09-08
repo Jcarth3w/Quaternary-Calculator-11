@@ -105,7 +105,7 @@ public class Controller
     public void onToggleButtonPress()
     {
         String numInDisplay = calculationTextField.getText();
-        if(converter.isQuaternary(numInDisplay))
+        if(converter.isQuaternary(displayStringToInt()))
         {
             calculationTextField.setText(String.valueOf(converter.toDecimal(Integer.parseInt(numInDisplay))));
         }
