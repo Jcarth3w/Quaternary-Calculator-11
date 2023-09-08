@@ -1,7 +1,7 @@
 # Quaternary-Calculator-11
 Base 4 calculator
 
-![Application screenshot](https://github.com/Jcarth3w/Quaternary-Calculator-11/blob/main/Screenshot.jpg?raw=true)
+![Application screenshot](https://github.com/Jcarth3w/Quaternary-Calculator-11/blob/main/Screenshot.png?raw=true)
 
 
 
