@@ -34,9 +34,8 @@ the number will be converted back to quaternary automatically.
 
 
 
+# Meetings and Tasks
 
-
-**Meetings**
 First meeting:
 Friday, Sep 1st in person
 
