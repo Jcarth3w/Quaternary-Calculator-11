@@ -20,34 +20,33 @@ public class Controller
 
     @FXML
     public void onZeroButtonPress() {
-        if (!displayQuaternary) {
-            onToggleButtonPress();
-        }
+        forceQuaternaryMode();
         calculationTextField.appendText("0");
     }
 
     public void onOneButtonPress() {
-        if (!displayQuaternary) {
-            onToggleButtonPress();
-        }
+        forceQuaternaryMode();
         calculationTextField.appendText("1");
     }
 
     public void onTwoButtonPress() {
-        if (!displayQuaternary) {
-            onToggleButtonPress();
-        }
+        forceQuaternaryMode();
         calculationTextField.appendText("2");
     }
 
     public void onThreeButtonPress() {
-        if (!displayQuaternary) {
-            onToggleButtonPress();
-        }
+        forceQuaternaryMode();
         calculationTextField.appendText("3");
     }
 
+    private void forceQuaternaryMode() {
+        if (!displayQuaternary) {
+            onToggleButtonPress();
+        }
+    }
+
     public void onDivideButtonPress() {
+        forceQuaternaryMode();
         int userInput = displayStringToInt();
         System.out.println(userInput);
         try
@@ -63,6 +62,7 @@ public class Controller
     }
 
     public void onMultiplyButtonPress() {
+        forceQuaternaryMode();
         int userInput = displayStringToInt();
         System.out.println(userInput);
         calculator.multiply(userInput);
@@ -70,6 +70,7 @@ public class Controller
     }
 
     public void onSubtractButtonPress() {
+        forceQuaternaryMode();
         int userInput = displayStringToInt();
         System.out.println(userInput);
         calculator.subtract(userInput);
@@ -77,6 +78,7 @@ public class Controller
     }
 
     public void onAddButtonPress() {
+        forceQuaternaryMode();
         int userInput = displayStringToInt();
         System.out.println(userInput);
         calculator.add(userInput);
@@ -84,12 +86,14 @@ public class Controller
     }
 
     public void onEqualButtonPress() {
+        forceQuaternaryMode();
         int userNum2 = displayStringToInt();
         userNum2 = calculator.equalBtn(userNum2);
         updateDisplay(userNum2);
     }
 
     public void onSquareButtonPress() {
+        forceQuaternaryMode();
         int userInput = displayStringToInt();
         System.out.println(userInput);
         userInput = calculator.square(userInput);
@@ -97,6 +101,7 @@ public class Controller
     }
 
     public void onSqrtButtonPress() {
+        forceQuaternaryMode();
         int userInput = displayStringToInt();
         System.out.println(userInput);
         userInput = calculator.sqrt(userInput);
@@ -105,6 +110,7 @@ public class Controller
 
     public void onClearButtonPress()
     {
+        forceQuaternaryMode();
         calculationTextField.clear();
         calculator.clear();
     }
@@ -113,7 +119,7 @@ public class Controller
     {
         displayQuaternary = !displayQuaternary;
         updateToggleStyle();
-        updateDisplay(displayStringToInt());
+        updateDisplay(Integer.parseInt(calculationTextField.getText()));
     }
 
     private void updateToggleStyle() {

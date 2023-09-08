@@ -18,6 +18,15 @@ public class CalculatorTests
     }
 
     @Test
+    public void repeatedAdditionTest()
+    {
+        for (int i = 0; i < 10; i++) {
+            calculator.add(2);
+        }
+        Assertions.assertEquals(20, calculator.equalBtn(0));
+    }
+
+    @Test
     public void subtractTest()
     {
         int num1 = 80;

@@ -38,6 +38,7 @@ public class Calculator
             return input;
         } else {
             applyOperation(input);
+            pendingOperation = null;
             return storedNumber.getAsInt();
         }
     }
@@ -59,7 +60,7 @@ public class Calculator
 
     private void applyOperation(int newInput) {
         if (pendingOperation == null || storedNumber.isEmpty()) {
-            throw new RuntimeException();
+            return;
         }
         int previousInput = storedNumber.getAsInt();
         int result = switch (pendingOperation) {

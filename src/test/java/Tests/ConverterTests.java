@@ -40,6 +40,12 @@ public class ConverterTests
 
     }
 
+    @Test
+    public void specialCaseToDecimalTest() {
+        int quaternaryNum = 212;
+        Assertions.assertEquals(38, converter.toDecimal(quaternaryNum));
+    }
+
 
     @Test
     public void easyToQuaternaryTest()
@@ -62,7 +68,11 @@ public class ConverterTests
         Assertions.assertEquals(1032233110, converter.toQuaternary(decimalNum));
     }
 
-
+    @Test
+    public void specialCaseToQuaternaryTest() {
+        int decimalNum = 38;
+        Assertions.assertEquals(212, converter.toQuaternary(decimalNum));
+    }
 
 
 }
