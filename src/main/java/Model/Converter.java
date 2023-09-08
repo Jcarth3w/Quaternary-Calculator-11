@@ -9,7 +9,7 @@ public class Converter
 
         for(int i = 0; i <  temp.length(); i++)
         {
-            decimalNum += Character.getNumericValue(temp.charAt(i)) * Math.pow(4, temp.length() - i - 1) ;
+            decimalNum += (int) (Character.getNumericValue(temp.charAt(i)) * Math.pow(4, temp.length() - i - 1));
         }
 
         return decimalNum;
@@ -32,20 +32,5 @@ public class Converter
 
         return Integer.parseInt(quaternaryNum.toString());
     }
-
-    public boolean isQuaternary(int num)
-    {
-        while (num > 0) {
-            int digit = num % 10;
-            if (digit >= 4) {
-                return false;
-            }
-            num /= 10;
-        }
-
-        return true;
-    }
-
-
 
 }
